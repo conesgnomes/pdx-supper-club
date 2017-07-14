@@ -1,0 +1,21 @@
+.body {
+  h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  width: 30vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .member-group {
+    text-align: center;
+    border: solid #1E1711 2px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 200px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

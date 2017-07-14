@@ -1,13 +1,14 @@
-<h2>PDX Supper Clubbers</h2>
-
-<div *ngFor="let member of members | async">
-  <h3 (click)="memberDetail(member)">{{member.name}}</h3>
-  <p>{{member.phone}}</p>
-  <div *ngIf="currentRoute === '/admin'">
-    <p>{{member.address}}</p>
-    <p>{{member.dish}}</p>
-    <p>{{member.bio}}</p>
-    <app-edit-member [selectedMember]="member"></app-edit-member>
-    <hr>
+<div class="body">
+  <h2>Club Members</h2>
+  <div *ngFor="let member of members | async">
+    <div class="member-group" (click)="memberDetail(member)">
+      <div *ngIf="currentRoute === '/member-list'">
+        <h3>{{member.name}}</h3>
+        <p>{{member.phone}}</p>
+      </div>
+      <div *ngIf="currentRoute === '/admin'">
+        <app-edit-member [selectedMember]="member"></app-edit-member>
+      </div>
+    </div>
   </div>
 </div>

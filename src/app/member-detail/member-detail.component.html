@@ -1,7 +1,10 @@
-<div>
-  <h3>{{(memberToDisplay | async)?.name}}</h3>
-  <p>{{(memberToDisplay | async)?.phone}}</p>
-  <p>{{(memberToDisplay | async)?.address}}</p>
-  <p>{{(memberToDisplay | async)?.dish}}</p>
-  <p>{{(memberToDisplay | async)?.bio}}</p>
+<div class="body">
+  <h2>Member Profile</h2>
+  <div class="member-group">
+    <h3>{{(memberToDisplay | async)?.name}}</h3>
+    <p>Phone: {{(memberToDisplay | async)?.phone}}</p>
+    <p>Address: {{(memberToDisplay | async)?.address}}</p>
+    <p>Favorite dish: {{(memberToDisplay | async)?.dish}}</p>
+    <p>Bio: {{(memberToDisplay | async)?.bio}}</p>
+  </div>
 </div>

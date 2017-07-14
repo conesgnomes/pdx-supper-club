@@ -1,37 +1,32 @@
-<div class="new-member-add">
-  <h3>Add a new club member</h3>
-  <div>
-    <div>
+<div class="new-member-add body">
+  <div class="add-member-group">
+    <h2>Add a new club member</h2>
+    <div class="input-group">
       <label>Name:</label>
-      <br>
       <input #newName>
     </div>
 
-    <div>
+    <div class="input-group">
       <label>Phone Number:</label>
-      <br>
       <input #newPhone>
     </div>
 
-    <div>
+    <div class="input-group">
       <label>Address:</label>
-      <br>
       <textarea #newAddress></textarea>
     </div>
 
-    <div>
+    <div class="input-group">
       <label>Favorite Dish:</label>
-      <br>
       <input #newDish>
     </div>
 
-    <div>
+    <div class="input-group">
       <label>Bio:</label>
-      <br>
       <textarea #newBio></textarea>
     </div>
+    <button (click)="submitForm(newName.value, newPhone.value, newAddress.value, newDish.value, newBio.value); newName.value=''; newPhone.value=''; newAddress.value=''; newDish.value=''; newBio.value=''">Add</button>
   </div>
-  <button (click)="submitForm(newName.value, newPhone.value, newAddress.value, newDish.value, newBio.value); newName.value=''; newPhone.value=''; newAddress.value=''; newDish.value=''; newBio.value=''">Add</button>
 </div>
 <div>
   <app-member-list></app-member-list>

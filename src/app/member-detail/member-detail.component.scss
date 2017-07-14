@@ -1,0 +1,17 @@
+.body {
+  width: 30vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .member-group {
+    border: solid #1E1711 2px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 90%;
+  }
+}
