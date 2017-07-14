@@ -1,0 +1,11 @@
+<h2>PDX Supper Clubbers</h2>
+
+<div *ngFor="let member of members | async">
+  <h3 (click)="goToDetailPage(member)">{{member.name}}</h3>
+  <div *ngIf="currentRoute === '/admin'">
+    {{member.dish}}
+    {{member.bio}}
+    <hr>
+    <app-edit-member [selectedMember]="member"></app-edit-member>
+  </div>
+</div>

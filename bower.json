@@ -1,0 +1,17 @@
+{
+  "name": "supper-club",
+  "description": "An app allowing to help organize the members of a monthly supper club\"",
+  "main": "",
+  "authors": [
+    "Connor Larsen"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
