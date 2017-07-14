@@ -1,3 +1,25 @@
-<p>
-  edit-member works!
-</p>
+<h4>Edit Member</h4>
+
+<label>New Name:</label>
+<input [(ngModel)]="selectedMember.name">
+<br>
+
+<label>New Address:</label>
+<textarea [(ngModel)]="selectedMember.address"></textarea>
+<br>
+
+<label>New Phone:</label>
+<input [(ngModel)]="selectedMember.phone">
+<br>
+
+<label>New Favorite Dish:</label>
+<input [(ngModel)]="selectedMember.dish">
+<br>
+
+<label>New Bio:</label>
+<textarea [(ngModel)]="selectedMember.bio"></textarea>
+<br>
+
+<button (click)="beginUpdatingMember(selectedMember)">Update</button>
+
+<button (click)="beginDeletingMember(selectedMember)">Delete</button>

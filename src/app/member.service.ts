@@ -19,8 +19,24 @@ export class MemberService {
     this.members.push(newMember);
   }
 
-  getMemberById(memberId: string){
-    return this.database.object('members/' + memberId)
+  getMemberById(memberId: string) {
+    return this.database.object('members/' + memberId);
+  }
+
+  updateMember(localUpdatedMember) {
+    let memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+    memberEntryInFirebase.update({
+      name: localUpdatedMember.name,
+      address: localUpdatedMember.address,
+      phone: localUpdatedMember.phone,
+      dish: localUpdatedMember.dish,
+      bio: localUpdatedMember.bio
+    });
+  }
+
+  deleteMember(localMemberToDelete) {
+    let memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+    memberEntryInFirebase.remove();
   }
 
 }

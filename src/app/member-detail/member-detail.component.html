@@ -1,3 +1,7 @@
-<p>
-  member-detail works!
-</p>
+<div>
+  <h3>{{(memberToDisplay | async)?.name}}</h3>
+  <p>{{(memberToDisplay | async)?.phone}}</p>
+  <p>{{(memberToDisplay | async)?.address}}</p>
+  <p>{{(memberToDisplay | async)?.dish}}</p>
+  <p>{{(memberToDisplay | async)?.bio}}</p>
+</div>

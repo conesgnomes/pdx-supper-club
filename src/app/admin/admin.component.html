@@ -1,3 +1,38 @@
-<p>
-  admin works!
-</p>
+<div class="new-member-add">
+  <h3>Add a new club member</h3>
+  <div>
+    <div>
+      <label>Name:</label>
+      <br>
+      <input #newName>
+    </div>
+
+    <div>
+      <label>Phone Number:</label>
+      <br>
+      <input #newPhone>
+    </div>
+
+    <div>
+      <label>Address:</label>
+      <br>
+      <textarea #newAddress></textarea>
+    </div>
+
+    <div>
+      <label>Favorite Dish:</label>
+      <br>
+      <input #newDish>
+    </div>
+
+    <div>
+      <label>Bio:</label>
+      <br>
+      <textarea #newBio></textarea>
+    </div>
+  </div>
+  <button (click)="submitForm(newName.value, newPhone.value, newAddress.value, newDish.value, newBio.value); newName.value=''; newPhone.value=''; newAddress.value=''; newDish.value=''; newBio.value=''">Add</button>
+</div>
+<div>
+  <app-member-list></app-member-list>
+</div>
