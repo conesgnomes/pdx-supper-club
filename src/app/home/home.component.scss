@@ -1,0 +1,19 @@
+.body {
+  width: 30vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2em;
+    &:last-of-type {
+      margin-top: 50px;
+    }
+  }
+  img {
+    margin-top: 10px;
+    width: 80%;
+  }
+}
