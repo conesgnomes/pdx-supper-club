@@ -1,25 +1,27 @@
-<h4>Edit Member</h4>
-
-<label>New Name:</label>
-<input [(ngModel)]="selectedMember.name">
-<br>
-
-<label>New Address:</label>
-<textarea [(ngModel)]="selectedMember.address"></textarea>
-<br>
-
-<label>New Phone:</label>
-<input [(ngModel)]="selectedMember.phone">
-<br>
-
-<label>New Favorite Dish:</label>
-<input [(ngModel)]="selectedMember.dish">
-<br>
-
-<label>New Bio:</label>
-<textarea [(ngModel)]="selectedMember.bio"></textarea>
-<br>
-
-<button (click)="beginUpdatingMember(selectedMember)">Update</button>
-
-<button (click)="beginDeletingMember(selectedMember)">Delete</button>
+<div class="body">
+  <div class="edit-member-group">
+    <h2>Edit Member</h2>
+    <div class="edit-group">
+      <label>New Name:</label>
+      <input [(ngModel)]="selectedMember.name">
+    </div>
+    <div class="edit-group">
+      <label>New Address:</label>
+      <textarea [(ngModel)]="selectedMember.address"></textarea>
+    </div>
+    <div class="edit-group">
+      <label>New Phone:</label>
+      <input [(ngModel)]="selectedMember.phone">
+    </div>
+    <div class="edit-group">
+      <label>New Favorite Dish:</label>
+      <input [(ngModel)]="selectedMember.dish">
+    </div>
+    <div class="edit-group">
+      <label>New Bio:</label>
+      <textarea [(ngModel)]="selectedMember.bio"></textarea>
+    </div>
+    <button (click)="beginUpdatingMember(selectedMember)">Update</button>
+    <button (click)="beginDeletingMember(selectedMember)">Delete</button>
+  </div>
+</div>

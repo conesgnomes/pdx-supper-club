@@ -5,8 +5,9 @@
       <div *ngIf="currentRoute === '/member-list'">
         <h3>{{member.name}}</h3>
         <p>{{member.phone}}</p>
+        <hr>
       </div>
-      <div *ngIf="currentRoute === '/admin'">
+      <div *ngIf="currentRoute === '/admin'" class="edit-view">
         <app-edit-member [selectedMember]="member"></app-edit-member>
       </div>
     </div>
